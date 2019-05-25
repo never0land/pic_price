@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/css/bootstrap.css">
+  <link rel="stylesheet" href="../css/js/bootstrap.min.js">
+  <script src="/css/js/jquery-3.2.1.js"></script>
+    <title>Document</title>
+    <style>
+    .main{background-color: white;opacity: 0.8;margin-left:29%;margin-right: 29%;margin-top: 93px;}
+    .bg_img{background-image: url(img/xiamen/xiamen2.jpg);margin-top:-10%;}
+    .pub_title{font-size: 1.5rem;font-weight: bold;text-align: center;}
+    .h1{font-size: 2rem;margin-top: -8px;}
+    .btns{margin-bottom: 30px;margin-top:40px;}
+    .small_font{font-size: 1rem;margin-top: 10px;}
+    .pub_height{margin-top:70px;}
+    #btns>a:hover{background-color:"lightblue"}
+    .login{color:white;position: relative;margin-top:10px;}
+    .register{background-color:#0099e5;margin-left:790px;margin-top:10px;color:white}
+.register:hover{background-color:#0085d1;}
+  .ul_distance{margin-left: 120px;}
+    </style>
+</head>
+<body>
+ <div>
+                <!--一级导航--->
+                <ul class="d-flex ul_distance">
+                    <div><a href="index.html"style="color:white;">logo</a></div>
+                    <div class="right">
+                    <a  class="register" href="register.html">注册</a>
+                    <a  class="login"  href="login.html"style="">登录</a>
+                    </div>
+                </ul>
+            </div>
+
+
+
+
+
+
+
+    <div class="bg_img" >  
+        <div style="height:45px;"></div>
+        <div class="main"style="position: relative;"> 
+        <form action="" class="pub_title">
+            <div>
+                <h2 class="h1">登录500px社区</h2>
+                <div class="small_font">签约供稿人 & 视觉me设计社区的用户无需注册，可直接登录</div>
+                <div class="btns">
+                <a href="javascript:;"onclick="phone()">手机号</a>&nbsp;&nbsp;
+                    <a href="javascript:;"onclick="load()">邮箱/用户名</a>
+                    </div>
+            </div>
+            <div id="loading">
+                <input type="text"placeholder="手机号"class="uname">
+                </div>
+                <br>
+                <div>
+                <input type="text"placeholder="密码"class="upwd">
+                </div>
+                <br>
+                <a href="javascript:;">放拖动验证</a>
+                <br>
+                <button class="btn btn-primary"style="width:300px;"onclick="phone()">登录</button>
+              
+                  <div class="small_font"><p >还没有账号？<a href="register.html">注册</a></p></div>
+                <div >
+                        <button  class="btns wx" herf="javascript"style="background-color:transparent;border-radius: 8px;"onclick="function()">微信登录</button>
+                        <button class="btns web"  style="background-color:transparent;border-radius: 8px;">微博登录</button>
+                </div>
+            </div>
+          
+         </form>
+            </div>
+    </div>    
+		<script>
+            $(".uname").focus();
+            $(".web").click(function(){
+                alert("网站未备案上线，暂时不支持微博登录，抱歉.按确定后，您将返回网站首页。");
+            });
+            $(".wx").click(function(){alert("网站未备案上线，暂时不支持微信登录，抱歉.按确定后，您将返回网站首页。")});
+            $(".btn-primary").click(function(){
+               phone();
+            })
+		</script>
+     
+       <script src="/css/js/phone_login.js"></script>
+       <script src="/css/js/email_login.js"></script>
+       <script src="/css/js/ajax.js"></script>
+</body>
+</html>
